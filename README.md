@@ -1,6 +1,6 @@
 # youtube-local
 
-![screenshot](https://user-images.githubusercontent.com/28744867/64483429-8a890780-d1b6-11e9-8423-6956ff7c588d.png)
+![screenshot](yt.png)
 youtube-local is a browser-based client written in Python for watching Youtube anonymously and without the lag of the slow page used by Youtube. One of the primary features is that all requests are routed through Tor, except for the video file at googlevideo.com. This is analogous to what HookTube (defunct) and Invidious do, except that you do not have to trust a third-party to respect your privacy. The assumption here is that Google won't put the effort in to incorporate the video file requests into their tracking, as it's not worth pursuing the incredibly small number of users who care about privacy (Tor video routing is also provided as an option). Tor has high latency, so this will not be as fast network-wise as regular Youtube. However, using Tor is optional; when not routing through Tor, video pages may load faster than they do with Youtube's page depending on your browser.
 
 The Youtube API is not used, so no keys or anything are needed. It uses the same requests as the Youtube webpage.
