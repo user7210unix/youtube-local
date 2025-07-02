@@ -77,7 +77,7 @@ Download the zip file under the Releases page. Unzip it anywhere you choose.
 
 Download the tarball under the Releases page and extract it. `cd` into the directory and run
 ```
-pip3 install -r requirements.txt
+pip3 install -r requirements.txt --break-system-packages
 ```
 
 **Note**: If pip isn't installed, first try installing it from your package manager. Make sure you install pip for python 3. For example, the package you need on debian is python3-pip rather than python-pip. If your package manager doesn't provide it, try to install it according to [this answer](https://unix.stackexchange.com/a/182467), but make sure you run `python3 get-pip.py` instead of `python get-pip.py`
