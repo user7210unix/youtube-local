@@ -1,59 +1,30 @@
-body{
-    --plyr-control-spacing: calc(var(--plyr-control-spacing-num)*1px);
-	--plyr-video-controls-background: rgba(0,0,0,0.8);
+/* plyr_fixes.css */
+body {
+    --plyr-control-spacing: 10px;
+    --plyr-video-controls-background: rgba(11, 18, 27, 0.8);
 }
-
-/* Scale captions with video height, not page width. Scale down to a minimum
-   of 10px so it does not become unreadable, rather than scaling
-   exactly proportional to video height */
+.plyr__progress__buffer {
+    color: rgba(224, 223, 226, 0.75) !important;
+}
 .plyr__captions {
-    font-size: calc(18px + 8px*(var(--video_height) - 720)/720) !important;
+    color: #e0dfe2;
+    font-size: calc(16px + 6px * (var(--video_height) - 720) / 720);
 }
-
-
-/* make buffered progress more visible */
-.plyr--video .plyr__progress__buffer{
-    color: rgba(255,255,255,0.75) !important;
-}
-
-/* Avoid visual jumps and flashes as plyr loads */
-.plyr audio, .plyr iframe, .plyr video{
-    width: 100% !important;
-    height: 100% !important;
-}
-.plyr__video-wrapper{
-    height: 100% !important;
-    width: 100% !important;
-}
-
-/* Prevent this div from blocking right-click menu for video
-e.g. Firefox playback speed options */
-.plyr__poster{
-    display: none !important;
-}
-
-/* Get rid of obnoxiously high padding on controls bar */
-.plyr__controls{
+.plyr__controls {
     padding-top: 4px !important;
     padding-bottom: 4px !important;
+    background-color: rgba(11, 18, 27, 0.8);
+    border-radius: 0 0 8px 8px;
 }
-
-.plyr__captions{
-    pointer-events: none;
+.plyr__control {
+    border-radius: 9999px;
+    background-color: #60a5fa;
 }
-
-
-/* For menus without a button above them - make them scroll if
-   they are too high for the player*/
-.plyr div[role="menu"]{
-    overflow-y: scroll;
-    max-height: calc(var(--video_height)*1px - 10px - 40px);
+.plyr__control:hover {
+    background-color: #3b82f6;
 }
-
-/* For menus with a button above them */
-.plyr button + div[role="menu"]{
-    overflow-y: scroll;
-    /* Subtract margin between controls and menu, and controls height,
-       and height of top menu button*/
-    max-height: calc(var(--video_height)*1px - 10px - 40px - 42px*var(--plyr-control-spacing-num)/10);
+.plyr__menu__container {
+    background-color: #1e2a3c;
+    border: 1px solid #374151;
+    border-radius: 8px;
 }
